@@ -34,7 +34,7 @@
             "Key": "01b9ecc8-66f9-4dd2-9837-f4dae9c2af57",
             "Value": {
                 "id": "85aa5b7e-439d-4b84-874c-fd8adfbef75a",
-                "resourcePath": "sprites\/helicopter\/helicopter.yy",
+                "resourcePath": "sprites\/helicopter_spr\/helicopter_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -58,7 +58,7 @@
             "Key": "2cbb1d61-3518-4825-8104-14d1a913a5f6",
             "Value": {
                 "id": "bab2a0e2-17b9-4422-88fb-e7984d987e1e",
-                "resourcePath": "sprites\/building\/building.yy",
+                "resourcePath": "sprites\/building_spr\/building_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -82,7 +82,7 @@
             "Key": "53946334-7bc1-4560-912e-d917d3792bc3",
             "Value": {
                 "id": "2a108228-7d70-4288-97ea-52d50f7d5fde",
-                "resourcePath": "sprites\/background\/background.yy",
+                "resourcePath": "sprites\/background_spr\/background_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -90,7 +90,7 @@
             "Key": "583c9924-2ecd-43be-ab37-1eaff25894e5",
             "Value": {
                 "id": "24ae0646-2832-49cd-a671-0ec8d2adb60b",
-                "resourcePath": "sprites\/tank\/tank.yy",
+                "resourcePath": "sprites\/tank_spr\/tank_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -106,7 +106,7 @@
             "Key": "6bffc99e-a9e2-4228-9947-2ca108131ef7",
             "Value": {
                 "id": "ca3a1f84-4e9e-4a4c-a602-d5ce10a2c31a",
-                "resourcePath": "sprites\/pear\/pear.yy",
+                "resourcePath": "sprites\/pear_spr\/pear_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "89d30850-657b-408e-ad77-db2a12370153",
+            "Value": {
+                "id": "2d9eea83-3cf2-4774-bd6a-728087396338",
+                "resourcePath": "objects\/object4\/object4.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8ca421b7-28c8-4281-8d8f-1f380d3e5f77",
             "Value": {
                 "id": "23a096e2-bcce-4ef1-9fd5-44934776ed89",
@@ -202,7 +210,7 @@
             "Key": "a297cd6f-dafe-4fa9-aa61-1abda559f5bc",
             "Value": {
                 "id": "c1ff5272-a78c-4564-8f3b-f71fd6034506",
-                "resourcePath": "sprites\/meat\/meat.yy",
+                "resourcePath": "sprites\/meat_spr\/meat_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
