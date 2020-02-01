@@ -58,7 +58,7 @@
             "Key": "2fb58ef7-a784-46b3-83f0-eb4a3a079fdb",
             "Value": {
                 "id": "9ac17e8d-e0c1-431c-a5f6-b9f9bf926f28",
-                "resourcePath": "rooms\/room0\/room0.yy",
+                "resourcePath": "rooms\/game_screen\/game_screen.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -119,11 +119,35 @@
             }
         },
         {
+            "Key": "8ca421b7-28c8-4281-8d8f-1f380d3e5f77",
+            "Value": {
+                "id": "23a096e2-bcce-4ef1-9fd5-44934776ed89",
+                "resourcePath": "objects\/body_map\/body_map.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90a38de2-7f53-443a-a83d-72435b2dcf5b",
             "Value": {
                 "id": "c068af6a-173e-46d1-b71b-e5c9b855661a",
                 "resourcePath": "views\/90a38de2-7f53-443a-a83d-72435b2dcf5b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "97013bee-434f-43cb-849f-f45da6874b5c",
+            "Value": {
+                "id": "8a405d37-d19e-4aaa-94c3-368cc9aaa0cd",
+                "resourcePath": "rooms\/start_screen\/start_screen.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "9c3cc51b-0585-4c75-b37e-4307866ae50d",
+            "Value": {
+                "id": "cff46e63-7858-44ab-9524-17d00ecfe9b6",
+                "resourcePath": "objects\/game_runner\/game_runner.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -151,6 +175,14 @@
             }
         },
         {
+            "Key": "c324a67a-e7fe-42fb-87a2-c7feb88c9cf4",
+            "Value": {
+                "id": "47df55ff-d1ce-475f-af9c-82d5251b42fc",
+                "resourcePath": "objects\/kaiju\/kaiju.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "0803645d-9c93-46d5-be67-eef4fb460d12",
@@ -164,6 +196,14 @@
                 "id": "8ac2460d-bf08-4f0d-ab42-d41cc09aa206",
                 "resourcePath": "views\/d1590f23-e3e8-4346-8fd1-b4c659fb1557.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d3f1ffca-c75b-4de5-9d71-338595f9ad59",
+            "Value": {
+                "id": "f0ddea43-f5da-4080-b046-852b043fa018",
+                "resourcePath": "objects\/match_three_puzzle\/match_three_puzzle.yy",
+                "resourceType": "GMObject"
             }
         },
         {
