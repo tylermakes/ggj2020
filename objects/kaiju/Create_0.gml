@@ -1,3 +1,10 @@
+leftArmState = 0
+rightArmState = 0
+heartState = 0
+brainState = 0
+leftLegState = 0
+rightLegState = 0
+
 kaijuX = 1024/4
 kaijuY = 768/3
 OBSTACLE_SPACING = 200
@@ -6,6 +13,8 @@ TOTAL_OBSTACLES = floor(1024/OBSTACLE_SPACING * 2)
 obstacles = []
 currentObstacleIndex = 0
 kaijuState = "walking"
+delayedTime = 0
+damage = 0
 
 //show_debug_message(@"TOTAL_OBS: " + string(TOTAL_OBSTACLES))
 //show_debug_message(@"obs leng: " + string(array_length_1d(obstacles)))

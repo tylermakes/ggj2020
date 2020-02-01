@@ -1,0 +1,8 @@
+draw_set_color(c_white)
+draw_text(x, y, @"KAIJU STATE:" + kaijuInstance.kaijuState)
+draw_text(x, y + 15, @"LEFT LEG:" + string(kaijuInstance.leftLegState))
+draw_text(x, y + 30, @"RIGHT LEG:" + string(kaijuInstance.rightLegState))
+draw_text(x, y + 45, @"LEFT ARM:" + string(kaijuInstance.leftArmState))
+draw_text(x, y + 60, @"RIGHT ARM:" + string(kaijuInstance.rightArmState))
+draw_text(x, y + 75, @"HEART:" + string(kaijuInstance.heartState))
+draw_text(x, y + 90, @"BRAIN:" + string(kaijuInstance.brainState))
