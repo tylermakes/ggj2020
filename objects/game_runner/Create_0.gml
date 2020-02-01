@@ -5,3 +5,4 @@ brainState = 0
 leftLegState = 0
 rightLegState = 0
 
+kaijuInstance = instance_create_layer(0, 0, "Instances", kaiju)

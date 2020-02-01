@@ -1,28 +1,18 @@
 {
-    "id": "9c3cc51b-0585-4c75-b37e-4307866ae50d",
+    "id": "12f85f95-197e-4477-b35c-31ca901bcd5d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "game_runner",
+    "name": "temp_kaiju",
     "eventList": [
         {
-            "id": "2ea7ff92-1c22-4057-b243-b610bd39b902",
+            "id": "5a0a94e4-5685-4cc0-a2ed-cf52873d004b",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "9c3cc51b-0585-4c75-b37e-4307866ae50d"
-        },
-        {
-            "id": "ba93dadb-aee8-4050-8abf-5371ff26df82",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "9c3cc51b-0585-4c75-b37e-4307866ae50d"
+            "eventtype": 8,
+            "m_owner": "12f85f95-197e-4477-b35c-31ca901bcd5d"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
