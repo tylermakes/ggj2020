@@ -95,6 +95,22 @@
             }
         },
         {
+            "Key": "3b60dc7a-6890-47f2-be6b-a2185d24d8b5",
+            "Value": {
+                "id": "8fd7d568-9b02-4d22-86fe-be90b09e0a7e",
+                "resourcePath": "sprites\/temp_body\/temp_body.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3f92753e-7d28-418d-a9cd-15c764d6e5ef",
+            "Value": {
+                "id": "ab92ee3c-7b2e-46be-b9e1-5e7ef26764c3",
+                "resourcePath": "sprites\/bullet_spr\/bullet_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "53946334-7bc1-4560-912e-d917d3792bc3",
             "Value": {
                 "id": "2a108228-7d70-4288-97ea-52d50f7d5fde",
@@ -119,6 +135,14 @@
             }
         },
         {
+            "Key": "5f4dca6a-e8fa-4515-a728-2e6f1336521c",
+            "Value": {
+                "id": "96e91b60-d149-49dc-96f6-c5f5c7860b5b",
+                "resourcePath": "objects\/bullet_obj\/bullet_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6bffc99e-a9e2-4228-9947-2ca108131ef7",
             "Value": {
                 "id": "ca3a1f84-4e9e-4a4c-a602-d5ce10a2c31a",
@@ -140,6 +164,14 @@
                 "id": "3745e97f-9c7c-49dc-ac0d-84243007e1ea",
                 "resourcePath": "views\/7a487ec8-f43d-44c1-9736-54a4501abce4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7a6e4b00-68b5-4f8e-8c1e-b2839f791830",
+            "Value": {
+                "id": "b2ae2331-1079-4492-ba1d-e09e09752924",
+                "resourcePath": "sprites\/dumb_collider\/dumb_collider.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -252,14 +284,6 @@
                 "id": "eb6b6313-27af-43b6-890d-01f62d7f9fc6",
                 "resourcePath": "views\/ba6b2c43-29d4-46d1-b7b4-ac933c97ac55.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "c239f0c3-0a54-4010-a02f-409c6481c385",
-            "Value": {
-                "id": "5e203bfc-796c-4474-a80c-a49733777471",
-                "resourcePath": "sprites\/temp_body\/temp_body.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

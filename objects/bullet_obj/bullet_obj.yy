@@ -1,41 +1,31 @@
 {
-    "id": "12f85f95-197e-4477-b35c-31ca901bcd5d",
+    "id": "5f4dca6a-e8fa-4515-a728-2e6f1336521c",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "temp_kaiju",
+    "name": "bullet_obj",
     "eventList": [
         {
-            "id": "5a0a94e4-5685-4cc0-a2ed-cf52873d004b",
+            "id": "d494beb7-2a25-48ac-b9e0-95b8cbc5128a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "12f85f95-197e-4477-b35c-31ca901bcd5d"
+            "eventtype": 7,
+            "m_owner": "5f4dca6a-e8fa-4515-a728-2e6f1336521c"
         },
         {
-            "id": "b9d96059-8ad4-4a5f-a729-0560980601ed",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "12f85f95-197e-4477-b35c-31ca901bcd5d"
-        },
-        {
-            "id": "94fa628e-74ae-45ed-9755-359d5b9fb7a6",
+            "id": "4ad0786f-b4ef-420a-9c0f-f92da3fcb486",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "12f85f95-197e-4477-b35c-31ca901bcd5d"
+            "m_owner": "5f4dca6a-e8fa-4515-a728-2e6f1336521c"
         }
     ],
-    "maskSpriteId": "7a6e4b00-68b5-4f8e-8c1e-b2839f791830",
+    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
@@ -53,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "3f92753e-7d28-418d-a9cd-15c764d6e5ef",
     "visible": true
 }

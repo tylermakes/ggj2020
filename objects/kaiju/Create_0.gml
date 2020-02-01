@@ -7,7 +7,7 @@ rightLegState = 0
 
 kaijuX = 1024/4
 kaijuY = 768/3
-OBSTACLE_SPACING = 200
+OBSTACLE_SPACING = 100
 nextObstacle = OBSTACLE_SPACING
 TOTAL_OBSTACLES = floor(1024/OBSTACLE_SPACING * 2)
 obstacles = []
