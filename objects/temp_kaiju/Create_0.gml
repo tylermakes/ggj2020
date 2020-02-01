@@ -1,2 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+leftArmState = 0
+rightArmState = 0
+heartState = 0
+brainState = 0
+leftLegState = 0
+rightLegState = 0
