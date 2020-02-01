@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "game_runner",
     "eventList": [
-        
+        {
+            "id": "2ea7ff92-1c22-4057-b243-b610bd39b902",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "9c3cc51b-0585-4c75-b37e-4307866ae50d"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

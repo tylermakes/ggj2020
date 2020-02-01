@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "01b9ecc8-66f9-4dd2-9837-f4dae9c2af57",
+            "Value": {
+                "id": "85aa5b7e-439d-4b84-874c-fd8adfbef75a",
+                "resourcePath": "sprites\/helicopter\/helicopter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0c675749-c430-4842-8219-07b489cd218b",
             "Value": {
                 "id": "adfc1f53-4dbd-4fb2-8967-db03dcdb75ee",
@@ -44,6 +52,14 @@
                 "id": "95ad25ee-7141-4dae-9525-68b2058aa476",
                 "resourcePath": "views\/17ae9d1f-dc89-4664-834e-ad5ff6ec81b2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2cbb1d61-3518-4825-8104-14d1a913a5f6",
+            "Value": {
+                "id": "bab2a0e2-17b9-4422-88fb-e7984d987e1e",
+                "resourcePath": "sprites\/building\/building.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -63,11 +79,35 @@
             }
         },
         {
+            "Key": "53946334-7bc1-4560-912e-d917d3792bc3",
+            "Value": {
+                "id": "2a108228-7d70-4288-97ea-52d50f7d5fde",
+                "resourcePath": "sprites\/background\/background.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "583c9924-2ecd-43be-ab37-1eaff25894e5",
+            "Value": {
+                "id": "24ae0646-2832-49cd-a671-0ec8d2adb60b",
+                "resourcePath": "sprites\/tank\/tank.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5e8af6f0-e26f-4fdd-8516-ed510cf7e367",
             "Value": {
                 "id": "3a9db506-881a-490c-8c97-e035f4c327db",
                 "resourcePath": "views\/5e8af6f0-e26f-4fdd-8516-ed510cf7e367.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6bffc99e-a9e2-4228-9947-2ca108131ef7",
+            "Value": {
+                "id": "ca3a1f84-4e9e-4a4c-a602-d5ce10a2c31a",
+                "resourcePath": "sprites\/pear\/pear.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -156,6 +196,14 @@
                 "id": "3c3dc7d6-0102-46f1-aabd-95740d8cf75a",
                 "resourcePath": "views\/9cd782ef-4c35-45b4-a372-9671adf42cf1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a297cd6f-dafe-4fa9-aa61-1abda559f5bc",
+            "Value": {
+                "id": "c1ff5272-a78c-4564-8f3b-f71fd6034506",
+                "resourcePath": "sprites\/meat\/meat.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
