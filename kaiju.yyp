@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "825365bc-5861-4f2b-9c3b-b1f13ddaa647",
+            "Value": {
+                "id": "d46c7548-6c87-4fe5-831b-9a98270bb714",
+                "resourcePath": "sprites\/helicopter_shooting_spr\/helicopter_shooting_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "85a60a51-ec9e-4028-b41b-b0cae58230d9",
             "Value": {
                 "id": "3d4f463a-7cc4-4a72-9b5f-9092594849dd",

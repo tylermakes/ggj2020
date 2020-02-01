@@ -53,7 +53,7 @@ if (kaijuInstance.kaijuState == "walking"
 					obstacle1.y = irandom_range(BUILDING_HEIGHT, BUILDING_HEIGHT - BUILDING_RANGE)
 				break;
 				case "helicopter":
-					obstacle1.sprite_index = helicopter_spr
+					obstacle1.sprite_index = helicopter_shooting_spr
 					obstacle1.y = irandom_range(HELI_HEIGHT, HELI_HEIGHT - HELI_RANGE)
 					obstacle1.state = "dontshoot"
 				break;

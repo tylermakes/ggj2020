@@ -1,8 +1,8 @@
 {
-    "id": "01b9ecc8-66f9-4dd2-9837-f4dae9c2af57",
+    "id": "825365bc-5861-4f2b-9c3b-b1f13ddaa647",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "helicopter_spr",
+    "name": "helicopter_shooting_spr",
     "For3D": false,
     "HTile": false,
     "VTile": false,
@@ -16,24 +16,24 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "bcbb5400-2942-4b4b-a937-d45e559f6644",
+            "id": "ccb271cc-a258-46e5-9e9d-3034916b8354",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
-            "SpriteId": "01b9ecc8-66f9-4dd2-9837-f4dae9c2af57",
+            "SpriteId": "825365bc-5861-4f2b-9c3b-b1f13ddaa647",
             "compositeImage": {
-                "id": "685849ea-97b6-4fb9-9126-db1fa089addc",
+                "id": "199fe96d-1c82-43c6-a589-b7e570b3cbde",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "bcbb5400-2942-4b4b-a937-d45e559f6644",
+                "FrameId": "ccb271cc-a258-46e5-9e9d-3034916b8354",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "53b6852b-c5fe-4c07-bb56-ec30d8dbd741",
+                    "id": "e8bd33e8-1101-4954-aa1b-dc9df08b5a3b",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "bcbb5400-2942-4b4b-a937-d45e559f6644",
-                    "LayerId": "037fe452-9397-4d23-b5bf-43cad890abed"
+                    "FrameId": "ccb271cc-a258-46e5-9e9d-3034916b8354",
+                    "LayerId": "85958158-8478-42f5-8174-0136fd229000"
                 }
             ]
         }
@@ -43,10 +43,10 @@
     "height": 80,
     "layers": [
         {
-            "id": "037fe452-9397-4d23-b5bf-43cad890abed",
+            "id": "85958158-8478-42f5-8174-0136fd229000",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
-            "SpriteId": "01b9ecc8-66f9-4dd2-9837-f4dae9c2af57",
+            "SpriteId": "825365bc-5861-4f2b-9c3b-b1f13ddaa647",
             "blendMode": 0,
             "isLocked": false,
             "name": "default",
@@ -54,7 +54,7 @@
             "visible": true
         }
     ],
-    "origin": 0,
+    "origin": 4,
     "originLocked": false,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
@@ -65,6 +65,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 80,
-    "xorig": 0,
-    "yorig": 0
+    "xorig": 40,
+    "yorig": 40
 }
