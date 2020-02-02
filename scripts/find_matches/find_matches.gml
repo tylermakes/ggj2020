@@ -1,6 +1,7 @@
 var GRID_SIZE = argument0;
 var gameGrid = argument1;
 var emptyCells = argument2;
+var winsCounter = 0;
 var matchCounter = 0;
 var matchesCleared = false;
 
@@ -23,6 +24,7 @@ for (var i = 0; i < GRID_SIZE; i++) {
 				thisCell[1] = j + k;
 				ds_stack_push(emptyCells, thisCell);
 			}
+			winsCounter = winsCounter + 1;
 			matchesCleared = true;
 		}
 		searching = true;
@@ -43,6 +45,7 @@ for (var i = 0; i < GRID_SIZE; i++) {
 				thisCell[1] = j;
 				ds_stack_push(emptyCells, thisCell);
 			}
+			winsCounter = winsCounter + 1;
 			matchesCleared = true;
 		}
 		matchCounter = 0;
@@ -60,4 +63,4 @@ for (var i = 0; i < GRID_SIZE; i++) {
 	}
 }
 
-return matchesCleared;
+return winsCounter;

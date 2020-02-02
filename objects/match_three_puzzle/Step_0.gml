@@ -16,14 +16,20 @@ if (delayCounter <= DELAY) {
 		shouldFillEmpty = false;
 		delayCounter = 0;
 	} else if (gridCalculating) {
-		var found = false
-		do found = find_matches(GRID_SIZE, gameGrid, emptyCells) until (!found);
+		var found = 0
+		do { 
+			found = find_matches(GRID_SIZE, gameGrid, emptyCells);
+			winsCounter += found;
+		} until (found == 0);
 		gridCalculating = false;
 		if (!ds_stack_empty(emptyCells)) {
 			shouldFillEmpty = true;
 			delayCounter = 0;
 		}
-	}	
+	} else if (!complete && winsCounter >= WIN_CONDITION) {
+		kaijuInstance.heartState = 0;
+		complete = true;
+	}
 }
 
 

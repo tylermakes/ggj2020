@@ -2,11 +2,13 @@
 
 GRID_SIZE = 5;
 MAX_ITEM_TYPES = 5;
-ORIGIN_X = 0;
-ORIGIN_Y = 368;
 OBJECT_DIMENSION = 80;
 DELAY = 60;
+WIN_CONDITION = 3;
 
+rot = 0;
+complete = false;
+winsCounter = 0;
 delayCounter = DELAY;
 gridCalculating = false;
 isSelectorRotated = false;
