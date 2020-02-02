@@ -17,14 +17,14 @@ if (kaijuState == "walking") {
 	}
 }
 
-if (leftArmPosition >= 360) {
-	leftArmPosition = 0
+if (leftArmPosition <= 0) {
+	leftArmPosition = 360
 } else {
-	leftArmPosition += ARM_ROT_SPEED
+	leftArmPosition -= ARM_ROT_SPEED
 }
 
-if (rightArmPosition >= 360) {
-	rightArmPosition = 0
+if (rightArmPosition <= 0) {
+	rightArmPosition = 360
 } else {
-	rightArmPosition += ARM_ROT_SPEED
+	rightArmPosition -= ARM_ROT_SPEED
 }

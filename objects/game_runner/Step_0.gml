@@ -1,28 +1,4 @@
 
-WALK_SPEED = 4
-JUMP_SPEED = 4
-BULLET_SPEED = 16
-BULLET_DAMAGE = 5
-HELI_SPEED = 5
-backgroundWidth = sprite_get_width(background_spr)
-KAIJU_JUMP_DISTANCE = 200 // distance from which the kaiju will jump if it can
-KAIJU_JUMP_DISTANCE_BUFFER = 40 // buffer distance in which the kaiju can jump (otherwise it's too close)
-KAIJU_STOP_DISTANCE_BUFFER = 20 // buffer distance in which the kaiju can be stopped (otherwise it's past the building)
-KAIJU_STOP_DISTANCE = 120 // distance at which the kaiju will run into a building and stop
-KAIJU_SHOOT_DISTANCE_BUFFER = 400 // buffer distance in which the kaiju can be shot (otherwise it's gone past)
-KAIJU_SHOOT_DISTANCE = 700 // distance at which the kaiju will get shot
-KAIJU_JUMP_TIME = 50	// how long the kaiju will go up and down when it jumps
-KAIJU_STOP_TIME = 30	// how long the kaiju will stop before trying to reverse
-KAIJU_REVERSE_TIME = 30	// how long the kaiju will go in reverse before going forward again
-KAIJU_DAMAGE_BEFORE_INJURY = 30	// amount of damage kaiju can take before a limb gets injured
-KAIJU_STOP_DAMAGE = 10	// damage kaiju takes from running into a building
-BUILDING_HEIGHT = 330 // the lowest height where the building should be
-BUILDING_RANGE = 50 // the range above BUILDING_HEIGHT that the building can be in
-HELI_HEIGHT = 200 // the lowest height the helicopter should be
-HELI_RANGE = 200 // the range above HELI_HEIGHT that the building can be in
-SHOOT_TIME = 16
-OBSTACLE_DISTANCE = 400 // distance between obstacles
-
 if (kaijuInstance.kaijuState == "walking"
 	|| kaijuInstance.kaijuState == "walkingReverse"
 	|| kaijuInstance.kaijuState == "jumping_up"
@@ -70,6 +46,8 @@ if (kaijuInstance.kaijuState == "walking"
 		kaijuInstance.kaijuState = "walkingReverse"
 		kaijuInstance.delayedTime = KAIJU_REVERSE_TIME
 	}
+} else if (kaijuInstance.kaijuState == "loved") {
+	walkSpeed = 0
 }
 
 // handle adding obstacles as necessary
@@ -84,23 +62,35 @@ if (kaijuInstance.nextObstacle <= 0) {
     }
     //show_debug_message(@"cancreate:" + string(canCreate))
     if (canCreate) {
-        var obstacle1 = instance_create_layer(1050, 340, "KaijuObs", obstacle)
-		obstacle1.type = choose("helicopter", "building")
-		obstacle1.jumpable = false
-		switch (obstacle1.type) {
-			case "building":
-				obstacle1.sprite_index = building_spr
-				obstacle1.jumpable = true
-				obstacle1.y = irandom_range(BUILDING_HEIGHT, BUILDING_HEIGHT - BUILDING_RANGE)
-			break;
-			case "helicopter":
-				obstacle1.sprite_index = helicopter_shooting_spr
-				obstacle1.y = irandom_range(HELI_HEIGHT, HELI_HEIGHT - HELI_RANGE)
-				obstacle1.state = "dontshoot"
-			break;
+		obstacleCount++
+		if (obstacleCount == OBSTACLES_BEFORE_KAIJU) {
+			kaijuInstance.nextObstacle = kaijuInstance.OBSTACLE_DISTANCE * 3
+		}
+		if (obstacleCount > OBSTACLES_BEFORE_KAIJU) {
+			obstacleCount = 0
+	        var obstacle2 = instance_create_layer(1250, 175, "KaijuObs", kaiju2)
+			obstacle2.type = "kaiju"
+			obstacle2.jumpable = false
+			kaijuInstance.obstacles[kaijuInstance.currentObstacleIndex] = obstacle2
+		} else {
+	        var obstacle1 = instance_create_layer(1050, 340, "KaijuObs", obstacle)
+			obstacle1.type = choose("helicopter", "building")
+			obstacle1.jumpable = false
+			switch (obstacle1.type) {
+				case "building":
+					obstacle1.sprite_index = building_spr
+					obstacle1.jumpable = true
+					obstacle1.y = irandom_range(BUILDING_HEIGHT, BUILDING_HEIGHT - BUILDING_RANGE)
+				break;
+				case "helicopter":
+					obstacle1.sprite_index = helicopter_shooting_spr
+					obstacle1.y = irandom_range(HELI_HEIGHT, HELI_HEIGHT - HELI_RANGE)
+					obstacle1.state = "dontshoot"
+				break;
+			}
+			kaijuInstance.obstacles[kaijuInstance.currentObstacleIndex] = obstacle1
 		}
 		//show_debug_message(@"creating at:" + string(kaijuInstance.currentObstacleIndex))
-        kaijuInstance.obstacles[kaijuInstance.currentObstacleIndex] = obstacle1
         kaijuInstance.currentObstacleIndex++
         if (kaijuInstance.currentObstacleIndex >= kaijuInstance.TOTAL_OBSTACLES) {
             kaijuInstance.currentObstacleIndex = 0
@@ -169,6 +159,61 @@ for (var i = 0; i < array_length_1d(kaijuInstance.obstacles); i++) {
 					bull.speed = BULLET_SPEED
 					bull.dmg = BULLET_DAMAGE
 					h.shootTime = SHOOT_TIME
+				}
+			}
+		}
+		
+		// handle kaiju
+		if (kaijuInstance.obstacles[i].type == "kaiju") {
+			var kaijuTwo = kaijuInstance.obstacles[i]
+			if (kaijuTwo.kaijuState == "walking") {
+				if (kaijuTwo.x - kaijuInstance.kaijuMonster.x < LOVE_DISTANCE
+					&& kaijuTwo.x - kaijuInstance.kaijuMonster.x > LOVE_DISTANCE - LOVE_DISTANCE_BUFFER) {
+						kaijuInstance.kaijuState = "loved"
+						kaijuTwo.kaijuState = "loved"
+						kaijuTwo.kaijuTalk = irandom(5)
+						kaijuTwo.delay = KAIJU_LOVE_DELAY
+				}
+			} else if (kaijuTwo.kaijuState == "loved") {
+				if (kaijuTwo.delay <= 0) {
+					kaijuInstance.kaijuState = "walking"
+					kaijuTwo.kaijuState = "walking_done"
+					switch(kaijuTwo.kaijuTalk) {
+						case 0: // heart
+							kaijuInstance.heartState = 0
+							kaijuInstance.leftArmState = 0
+							kaijuInstance.rightArmState = 0
+							kaijuInstance.heartState = 0
+							kaijuInstance.brainState = 0
+							kaijuInstance.leftLegState = 0
+							kaijuInstance.rightLegState = 0
+						break;
+						case 1: // burger
+							kaijuInstance.heartState = 0
+						break;
+						case 2: // smile
+							kaijuInstance.brainState = 0
+						break;
+						case 3: // helicopter_icon
+							kaijuInstance.leftArmState = 0
+							kaijuInstance.rightArmState = 0
+						break;
+						case 4: // mad_face
+							kaijuInstance.brainState = 1
+							kaijuInstance.heartState = 1
+						break;
+						case 5: // oops_face
+							kaijuInstance.leftLegState = 1
+							kaijuInstance.rightLegState = 1
+						break;
+					}
+					kaijuTwo.kaijuTalk = -1
+				} else {
+					kaijuTwo.delay--
+				}
+			} else if (kaijuTwo.kaijuState == "walking_done") {
+				if (walkSpeed == 0) {
+					kaijuTwo.x -= WALK_SPEED; // don't stop if you're done
 				}
 			}
 		}

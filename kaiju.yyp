@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "3c13ee07-c475-4cd8-b721-5c8f64380672",
+            "Value": {
+                "id": "5aa48f14-f69a-4b08-89d1-4fd88ea6f4df",
+                "resourcePath": "objects\/kaiju2\/kaiju2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3c84b34a-6ece-460a-a026-6dfd7f704a7e",
             "Value": {
                 "id": "8b2a67ef-5ac7-47de-b2c9-4ebb32b12ab8",
