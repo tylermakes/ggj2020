@@ -48,9 +48,6 @@ for (var i = 0; i < GRID_SIZE; i++) {
 		}
 		var newValue = optionsList[| irandom(ds_list_size(optionsList) - 1)];
 		gameGrid[# i, j] = newValue;
-		show_debug_message(@"Value at [" + string(i) + ", " + string(j) + "] is: " + string(newValue));
 	}
 }
-
-show_debug_message("Game grid created");
 

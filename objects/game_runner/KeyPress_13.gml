@@ -13,7 +13,7 @@ if (p1Mode == "body") {
 			p1Game = instance_create_layer(0, 368, "PuzzleInstances", line_puzzle)
 	    break;
 	    case 3: // rightArm
-			p1Game = instance_create_layer(0, 368, "PuzzleInstances", line_puzzle)
+			p1Game = instance_create_layer(0, 368, "PuzzleInstances", flow_puzzle)
 	    break;
 	    case 4: // leftLeg
 			p1Game = instance_create_layer(0, 368, "PuzzleInstances", line_puzzle)
