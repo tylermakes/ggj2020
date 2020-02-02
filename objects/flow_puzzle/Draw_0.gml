@@ -1,11 +1,30 @@
 /// @description Draw the initial nodes and update the paths
+var bracketColor = c_white;
 
-draw_set_color(c_blue);
-draw_rectangle(x + (blueStart[0] * OBJECT_DIMENSION), y + (blueStart[1] * OBJECT_DIMENSION), x + ((blueStart[0] + 1) * OBJECT_DIMENSION), y + ((blueStart[1] + 1) * OBJECT_DIMENSION), false);
-draw_rectangle(x + (blueEnd[0] * OBJECT_DIMENSION), y + (blueEnd[1] * OBJECT_DIMENSION), x + ((blueEnd[0] + 1) * OBJECT_DIMENSION), y + ((blueEnd[1] + 1) * OBJECT_DIMENSION), false);
-draw_set_color(c_red);
-draw_rectangle(x + (redStart[0] * OBJECT_DIMENSION), y + (redStart[1] * OBJECT_DIMENSION), x + ((redStart[0] + 1) * OBJECT_DIMENSION), y + ((redStart[1] + 1) * OBJECT_DIMENSION), false);
-draw_rectangle(x + (redEnd[0] * OBJECT_DIMENSION), y + (redEnd[1] * OBJECT_DIMENSION), x + ((redEnd[0] + 1) * OBJECT_DIMENSION), y + ((redEnd[1] + 1) * OBJECT_DIMENSION), false);
-draw_set_color(c_green);
-draw_rectangle(x + (greenStart[0] * OBJECT_DIMENSION), y + (greenStart[1] * OBJECT_DIMENSION), x + ((greenStart[0] + 1) * OBJECT_DIMENSION), y + ((greenStart[1] + 1) * OBJECT_DIMENSION), false);
-draw_rectangle(x + (greenEnd[0] * OBJECT_DIMENSION), y + (greenEnd[1] * OBJECT_DIMENSION), x + ((greenEnd[0] + 1) * OBJECT_DIMENSION), y + ((greenEnd[1] + 1) * OBJECT_DIMENSION), false);
+for (var i = 0; i < GRID_SIZE; i++) {
+	for (var j = 0; j < GRID_SIZE; j++) {
+		if (gameGrid[# i, j] == "R") {
+			draw_set_color(c_red);
+		}
+		if (gameGrid[# i, j] == "B") {
+			draw_set_color(c_blue);
+		}
+		if (gameGrid[# i, j] == "G") {
+			draw_set_color(c_green);
+		}
+		if (gameGrid[# i, j] != 0) {
+			draw_rectangle(x + (i * OBJECT_DIMENSION), y + (j * OBJECT_DIMENSION), x + ((i + 1) * OBJECT_DIMENSION), y + ((j + 1) * OBJECT_DIMENSION), false);	
+		}
+	}
+}
+
+if (currentColor == "R") {
+	bracketColor = c_red;
+}
+if (currentColor == "B") {
+	bracketColor = c_blue;
+}
+if (currentColor == "G") {
+	bracketColor = c_green;
+}
+draw_sprite_ext(square_bracket, 0, x + (selectorLocation[0] * OBJECT_DIMENSION) + OBJECT_DIMENSION, y + (selectorLocation[1] * OBJECT_DIMENSION), 1, 1, 0, bracketColor, 1);
