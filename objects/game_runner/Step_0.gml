@@ -26,17 +26,17 @@ if (kaijuInstance.kaijuState == "walking"
 	|| kaijuInstance.kaijuState == "walkingReverse"
 	|| kaijuInstance.kaijuState == "jumping_up"
 	|| kaijuInstance.kaijuState == "jumping_down") {
-		
+
 	walkSpeed = kaijuInstance.kaijuState == "walkingReverse" ? -WALK_SPEED : WALK_SPEED
-	
+
 	if (kaijuInstance.leftLegState != 0 && kaijuInstance.rightLegState != 0) {
 		walkSpeed = 0
 	}
-	
+
 	// move the bg
 	kaijuInstance.bgInstance.x = kaijuInstance.bgInstance.x - walkSpeed
 	kaijuInstance.bgInstanceFlipped.x = kaijuInstance.bgInstanceFlipped.x - walkSpeed
-	
+
 	// handle jumping up/down
 	if (kaijuInstance.kaijuState == "jumping_up" || kaijuInstance.kaijuState == "jumping_down") {
 		kaijuInstance.kaijuMonster.y += kaijuInstance.kaijuState == "jumping_up" ? -JUMP_SPEED : JUMP_SPEED
@@ -51,7 +51,7 @@ if (kaijuInstance.kaijuState == "walking"
 			}
 		}
 	}
-	
+
 	// handle walking reverse state
 	if (kaijuInstance.kaijuState == "walkingReverse") {
 		if (kaijuInstance.delayedTime > 0) {
@@ -65,7 +65,7 @@ if (kaijuInstance.kaijuState == "walking"
 	if (kaijuInstance.delayedTime > 0) {
 		kaijuInstance.delayedTime--
 	} else {
-	show_debug_message(@"delay: " + string(kaijuInstance.delayedTime))
+	   //show_debug_message(@"delay: " + string(kaijuInstance.delayedTime))
 		kaijuInstance.kaijuState = "walkingReverse"
 		kaijuInstance.delayedTime = KAIJU_REVERSE_TIME
 	}
@@ -107,15 +107,15 @@ if (kaijuInstance.nextObstacle <= 0) {
     }
 }
 // /handle adding obstacles as necessary
-	
-	
+
+
 for (var i = 0; i < array_length_1d(kaijuInstance.obstacles); i++) {
 	if (instance_exists(kaijuInstance.obstacles[i])) {
 		kaijuInstance.obstacles[i].x = kaijuInstance.obstacles[i].x - walkSpeed
 		if (kaijuInstance.obstacles[i].x < -300) {
 			kaijuInstance.obstacles[i].dead = "true"
 		}
-			
+
 		if (kaijuInstance.kaijuState != "jumping_up"
 			&& kaijuInstance.kaijuState != "jumping_down"
 			&& kaijuInstance.kaijuState != "stopped"
@@ -138,7 +138,7 @@ for (var i = 0; i < array_length_1d(kaijuInstance.obstacles); i++) {
 				}
 			}
 		}
-			
+
 		// handle helicopter
 		if (kaijuInstance.obstacles[i].type == "helicopter") {
 			var h = kaijuInstance.obstacles[i];
@@ -153,7 +153,7 @@ for (var i = 0; i < array_length_1d(kaijuInstance.obstacles); i++) {
 			} else {
 				h.state = "dontshoot"
 			}
-				
+
 			if (h.state == "shoot") {
 				if (h.shootTime > 0) {
 					h.shootTime--
