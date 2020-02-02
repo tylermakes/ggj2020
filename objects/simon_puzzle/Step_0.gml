@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-test = false
 if (simonState == "play") {
 	simonState = "playColorIn" //show_debug_message(@"1sim: " + simonState)
 	if (whoseTurn == "computer") {
@@ -9,6 +8,13 @@ if (simonState == "play") {
 	} else if (whoseTurn == "player") {
 		currentColor = ds_list_find_value(playerInputs, currentIdx)
 		//show_debug_message(@"P:" + currentColor + ", " + string(currentIdx))
+	}
+	if (currentColor == "red") {
+		audio_play_sound(red_blip, 50, false);
+	} else if (currentColor == "green") {
+		audio_play_sound(green_boop, 50, false);
+	} else if (currentColor == "blue") {
+		audio_play_sound(blue_bleep, 50, false);
 	}
 	currentAlphaStep = 0
 } else if (simonState == "playColorIn") {

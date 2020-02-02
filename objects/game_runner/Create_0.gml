@@ -5,8 +5,8 @@ p1Map.kaijuInstance = kaijuInstance
 
 p1Mode = "body"
 
-OBSTACLES_BEFORE_KAIJU = 2
-obstacleCount = 15
+OBSTACLES_BEFORE_KAIJU = 3
+obstacleCount = 0
 
 WALK_SPEED = 4
 JUMP_SPEED = 4
@@ -35,3 +35,9 @@ OBSTACLE_DISTANCE = 400 // distance between obstacles
 LOVE_DISTANCE = 400
 LOVE_DISTANCE_BUFFER = 60
 KAIJU_LOVE_DELAY = 50
+
+mus = bg_music
+if (irandom(1)) {
+	mus = bg_alt
+}
+audio_play_sound(mus, 100, true);
