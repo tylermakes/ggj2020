@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "f6a8e2be-4e20-4a49-a735-66dba4f72852",
+            "Value": {
+                "id": "2848427e-45c7-480b-9d1c-554b7cf5d7fb",
+                "resourcePath": "sprites\/temp_limb_walk\/temp_limb_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fc87c57d-6562-434e-b8bc-7ffe6bd3158b",
             "Value": {
                 "id": "de4a15db-89fd-4f0e-8cd0-fd1abd62f428",

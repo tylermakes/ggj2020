@@ -7,3 +7,4 @@ kaijuMonster.heartState = heartState
 kaijuMonster.brainState = brainState
 kaijuMonster.leftLegState = leftLegState
 kaijuMonster.rightLegState = rightLegState
+kaijuMonster.kaijuState = kaijuState
