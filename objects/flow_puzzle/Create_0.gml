@@ -11,17 +11,20 @@ delayCounter = DELAY;
 gridCalculating = false;
 gameGrid = ds_grid_create(GRID_SIZE, GRID_SIZE);
 selectorLocation = array_create(2);
-currentColor = "R";
+currentColor = 0;
 
 selectorLocation[0] = 0;
 selectorLocation[1] = 0;
 
+colors = array_create(3);
 redStart = array_create(2);
 blueStart = array_create(2);
 greenStart = array_create(2);
 redEnd = array_create(2);
 blueEnd = array_create(2);
 greenEnd = array_create(2);
+
+colors = ["R", "G", "B"];
 
 for (var i = 0; i < GRID_SIZE; i++) {
 	for (var j = 0; j < GRID_SIZE; j++) {

@@ -18,13 +18,13 @@ for (var i = 0; i < GRID_SIZE; i++) {
 	}
 }
 
-if (currentColor == "R") {
+if (colors[currentColor] == "R") {
 	bracketColor = c_red;
 }
-if (currentColor == "B") {
+if (colors[currentColor] == "B") {
 	bracketColor = c_blue;
 }
-if (currentColor == "G") {
+if (colors[currentColor] == "G") {
 	bracketColor = c_green;
 }
-draw_sprite_ext(square_bracket, 0, x + (selectorLocation[0] * OBJECT_DIMENSION) + OBJECT_DIMENSION, y + (selectorLocation[1] * OBJECT_DIMENSION), 1, 1, 0, bracketColor, 1);
+draw_sprite_ext(square_bracket, 0, x + (selectorLocation[0] * OBJECT_DIMENSION), y + (selectorLocation[1] * OBJECT_DIMENSION), 1, 1, 0, bracketColor, 1);
