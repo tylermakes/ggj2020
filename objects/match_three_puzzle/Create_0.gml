@@ -2,15 +2,31 @@
 
 GRID_SIZE = 5;
 MAX_ITEM_TYPES = 5;
+ORIGIN_X = 0;
+ORIGIN_Y = 368;
+OBJECT_DIMENSION = 80;
+DELAY = 60;
 
+delayCounter = DELAY;
+gridCalculating = false;
+isSelectorRotated = false;
+shouldFillEmpty = false;
 gameGrid = ds_grid_create(GRID_SIZE, GRID_SIZE);
+emptyCells = ds_stack_create();
 selectorLocation0 = array_create(2);
 selectorLocation1 = array_create(2);
 
 selectorLocation0[0] = 0;
 selectorLocation0[1] = 0;
-selectorLocation1[0] = 0;
-selectorLocation1[1] = 1;
+selectorLocation1[0] = 1;
+selectorLocation1[1] = 0;
+
+objectTypes = ds_map_create();
+objectTypes[? 1] = helicopter_spr;
+objectTypes[? 2] = meat_spr;
+objectTypes[? 3] = pear_spr;
+objectTypes[? 4] = tank_spr;
+objectTypes[? 5] = building_spr;
 
 for (var i = 0; i < GRID_SIZE; i++) {
 	for (var j = 0; j < GRID_SIZE; j++) {

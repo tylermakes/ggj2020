@@ -1,0 +1,33 @@
+/// @description Update the rendering of the grid
+
+
+
+if (delayCounter <= DELAY) {
+	delayCounter = delayCounter + 1;
+	show_debug_message(@"Delay at " + string(delayCounter));
+} else {
+	if (shouldFillEmpty) {
+		while (!ds_stack_empty(emptyCells)) {
+			var currentEmptyCell = ds_stack_pop(emptyCells);
+			show_debug_message(@"Current cell is " + string(currentEmptyCell[0]) + ", " + string(currentEmptyCell[1]));
+			gameGrid[# currentEmptyCell[0], currentEmptyCell[1]] = irandom_range(1, 5);
+		}
+		gridCalculating = true;
+		shouldFillEmpty = false;
+		delayCounter = 0;
+	} else if (gridCalculating) {
+		var found = false
+		do found = find_matches(GRID_SIZE, gameGrid, emptyCells) until (!found);
+		gridCalculating = false;
+		if (!ds_stack_empty(emptyCells)) {
+			shouldFillEmpty = true;
+			delayCounter = 0;
+		}
+	}	
+}
+
+
+
+
+
+	
