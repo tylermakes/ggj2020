@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "53917932-2e28-4eab-8eb1-83b1668aec31",
+            "Value": {
+                "id": "48a6f210-c500-4e07-bd85-4ac397acb271",
+                "resourcePath": "objects\/panel\/panel.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "53946334-7bc1-4560-912e-d917d3792bc3",
             "Value": {
                 "id": "2a108228-7d70-4288-97ea-52d50f7d5fde",

@@ -6,7 +6,7 @@ leftLegState = 0
 rightLegState = 0
 
 kaijuX = 1024/4
-kaijuY = 768/3
+kaijuY = 768/4
 OBSTACLE_DISTANCE = 400
 nextObstacle = OBSTACLE_DISTANCE
 TOTAL_OBSTACLES = floor(1024/OBSTACLE_DISTANCE) * 2
