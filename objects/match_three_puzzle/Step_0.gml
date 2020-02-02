@@ -20,6 +20,9 @@ if (delayCounter <= DELAY) {
 		do {
 			found = find_matches(GRID_SIZE, gameGrid, emptyCells);
 			winsCounter += found;
+			if (found >= 1 && kaijuInstance.damage > - 10) {
+				kaijuInstance.damage -= 15 // heal for a job well done, also can build a small buffer
+			}
 		} until (found == 0);
 		gridCalculating = false;
 		if (!ds_stack_empty(emptyCells)) {
