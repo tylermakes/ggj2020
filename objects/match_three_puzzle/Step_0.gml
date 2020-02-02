@@ -4,7 +4,7 @@
 
 if (delayCounter <= DELAY) {
 	delayCounter = delayCounter + 1;
-	show_debug_message(@"Delay at " + string(delayCounter));
+	//show_debug_message(@"Delay at " + string(delayCounter));
 } else {
 	if (shouldFillEmpty) {
 		while (!ds_stack_empty(emptyCells)) {
@@ -17,7 +17,7 @@ if (delayCounter <= DELAY) {
 		delayCounter = 0;
 	} else if (gridCalculating) {
 		var found = 0
-		do { 
+		do {
 			found = find_matches(GRID_SIZE, gameGrid, emptyCells);
 			winsCounter += found;
 		} until (found == 0);
@@ -36,4 +36,4 @@ if (delayCounter <= DELAY) {
 
 
 
-	
+

@@ -1,15 +1,16 @@
 
 WALK_SPEED = 4
 JUMP_SPEED = 4
-BULLET_SPEED = 10
+BULLET_SPEED = 16
+BULLET_DAMAGE = 5
 HELI_SPEED = 5
 backgroundWidth = sprite_get_width(background_spr)
 KAIJU_JUMP_DISTANCE = 200 // distance from which the kaiju will jump if it can
 KAIJU_JUMP_DISTANCE_BUFFER = 40 // buffer distance in which the kaiju can jump (otherwise it's too close)
 KAIJU_STOP_DISTANCE_BUFFER = 20 // buffer distance in which the kaiju can be stopped (otherwise it's past the building)
 KAIJU_STOP_DISTANCE = 120 // distance at which the kaiju will run into a building and stop
-KAIJU_SHOOT_DISTANCE_BUFFER = 100 // buffer distance in which the kaiju can be shot (otherwise it's gone past)
-KAIJU_SHOOT_DISTANCE = 600 // distance at which the kaiju will get shot
+KAIJU_SHOOT_DISTANCE_BUFFER = 400 // buffer distance in which the kaiju can be shot (otherwise it's gone past)
+KAIJU_SHOOT_DISTANCE = 700 // distance at which the kaiju will get shot
 KAIJU_JUMP_TIME = 50	// how long the kaiju will go up and down when it jumps
 KAIJU_STOP_TIME = 30	// how long the kaiju will stop before trying to reverse
 KAIJU_REVERSE_TIME = 30	// how long the kaiju will go in reverse before going forward again
@@ -19,7 +20,7 @@ BUILDING_HEIGHT = 370 // the height where the building should be
 BUILDING_RANGE = 45 // the range above BUILDING_HEIGHT that the building can be in
 HELI_HEIGHT = 300 // the height where the building should be
 HELI_RANGE = 200 // the range above HELI_HEIGHT that the building can be in
-SHOOT_TIME = 10
+SHOOT_TIME = 16
 OBSTACLE_DISTANCE = 400 // distance between obstacles
 
 if (kaijuInstance.kaijuState == "walking"
@@ -166,6 +167,7 @@ for (var i = 0; i < array_length_1d(kaijuInstance.obstacles); i++) {
 					bull.image_xscale = .5
 					bull.image_yscale = .5
 					bull.speed = BULLET_SPEED
+					bull.dmg = BULLET_DAMAGE
 					h.shootTime = SHOOT_TIME
 				}
 			}
